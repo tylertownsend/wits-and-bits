@@ -14,3 +14,9 @@ function install_conda() {
   $(sha256sum /tmp/Anaconda3-2020.02-Linux-x86_64.sh) -eq "2b9f088b2022edb474915d9f69a803d6449d5fdb4c303041f60ac4aefcc208bb  /tmp/Anaconda3-2020.02-Linux-x86_64.sh"
   bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh
 }
+
+function setup_git() {
+  git config --global user.name "Tyler Townsend"
+  git config --global user.email "townsend.ts@outlook.com"
+  git config --global core.editor vim
+}
