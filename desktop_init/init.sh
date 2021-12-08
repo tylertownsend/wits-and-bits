@@ -20,3 +20,7 @@ function setup_git() {
   git config --global user.email "townsend.ts@outlook.com"
   git config --global core.editor vim
 }
+
+setup_git()
+install_edge()
+install_conda()
