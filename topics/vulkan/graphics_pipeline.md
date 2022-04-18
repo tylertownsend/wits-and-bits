@@ -153,9 +153,19 @@ You need to provide a dynamic state create info for all dynatimc states that wan
 `VkPipelineLayout` uniform values to be specified during pipeline creatino by creating a `VkPipelineLayout` object.
 
 # Render Passes
+Render Pass specifies how many color and depth buffers there will be and how many samples to use for each of them and how their contents should be handled throughout the rendering operations.
 
 ## Attachment Descriptions
+`VkAttachmentDescription` where format should match the swap chain images.
+
+images need to be transitioned to specific layouts that are suitable for the operation that they're going to be involved in next.
+
+The initialLayout specifies which layout the image will have before the render pass begins. The finalLayout specifies the layout to automatically transition to when the render pass finishes. 
 
 ## SUbpasses and attachement references
+Subpasses are subsequent rendering operations that depend on the contents of the framebuffers in previous passes. Grouping rendering operations into one render pass, then Vulkan is able to reorder the operations and conserve memory bandwith.
 
 ## Render Pass
+NOw that the attachment and a basic subpass reference has been described we can create the render pass itself.
+`VkRenderPass renderPass;`
+`VkPipelineLayout pipelineLayout;`
