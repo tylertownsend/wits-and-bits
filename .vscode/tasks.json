@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "debug",
+      "type": "shell",
+      "command": "echo",
+      "args": [
+        "workspace=${workspaceFolder}; dirname=${relativeFileDirname}; cwd=${cwd}; path"
+      ]
+    },
+    {
+      "label": "g++",
+      "type": "shell",
+      "command": "g++",
+      "options": {
+        "cwd": "${workspaceFolder}/${relativeFileDirname}"
+      },
+      "args": [
+        "--std=c++17",
+        "${fileBasenameNoExtension}.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Task for compiling the current selected file",
+      "dependsOn": [
+        "debug"
+      ]
+    }
+  ]
+}
