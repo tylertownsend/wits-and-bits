@@ -15,3 +15,6 @@ After completing a successful auth, run
 ```
 git config --global credential.helper store
 ```
+located in folder ~/.git-credentials
+
+cache will keep in memory
