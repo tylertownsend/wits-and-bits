@@ -29,6 +29,10 @@ What you need to do is find the latest supported drivers for the OS, for this ca
 sudo apt install nvidia-driver-470
 ```
 
+Recommended driver for nvidia 515.48
+```
+```
+
 ```
 nvidia-smi
 ```
