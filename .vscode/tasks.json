@@ -14,11 +14,12 @@
       "type": "shell",
       "command": "g++",
       "options": {
-        "cwd": "${workspaceFolder}/${relativeFileDirname}"
+        "cwd": "${workspaceFolder}"
       },
       "args": [
+        "-g",
         "--std=c++17",
-        "${fileBasenameNoExtension}.cpp"
+        "${file}"
       ],
       "group": {
         "kind": "build",
