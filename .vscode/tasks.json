@@ -29,6 +29,28 @@
       "dependsOn": [
         "debug"
       ]
+    },
+    {
+      "label": "cwindows",
+      "type": "shell",
+      "command": "cwindows",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "args": [
+        "/Zi",  // Generate debugging information
+        "/EHsc", // Specifies the model of exception handling (standard C++).
+        "/std:c++17", // Specifies the C++ language standard.
+        "${file}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Task for compiling the current selected file with MSVC",
+      "dependsOn": [
+        "debug"
+      ]
     }
   ]
 }
